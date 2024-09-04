@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="88" viewBox="0 0 88 88">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8b51ef"/>
+      <stop offset="0.485" stop-color="#2a49e2"/>
+      <stop offset="1" stop-color="#0094d4"/>
+    </linearGradient>
+  </defs>
+  <g id="img_hub-logo_cassiopeia" transform="translate(-53)">
+    <circle id="Ellipse_4236" data-name="Ellipse 4236" cx="44" cy="44" r="44" transform="translate(53)" fill="url(#linear-gradient)"/>
+    <g id="Gruppe_39518" data-name="Gruppe 39518" transform="translate(19609.971 20928.951)">
+      <path id="Pfad_96648" data-name="Pfad 96648" d="M-19539.416-20901.453l9.363,16.879,16.838-2.3,8.172,19.588,18.973-12.033" transform="translate(-0.278 -0.272)" fill="none" stroke="#fff" stroke-width="2"/>
+      <circle id="Ellipse_4237" data-name="Ellipse 4237" cx="3.5" cy="3.5" r="3.5" transform="translate(-19542.971 -20904.951)" fill="#fff"/>
+      <circle id="Ellipse_4238" data-name="Ellipse 4238" cx="3.5" cy="3.5" r="3.5" transform="translate(-19533.971 -20888.951)" fill="#fff"/>
+      <circle id="Ellipse_4242" data-name="Ellipse 4242" cx="3.5" cy="3.5" r="3.5" transform="translate(-19516.971 -20890.951)" fill="#fff"/>
+      <circle id="Ellipse_4243" data-name="Ellipse 4243" cx="3.5" cy="3.5" r="3.5" transform="translate(-19508.971 -20871.951)" fill="#fff"/>
+      <circle id="Ellipse_4244" data-name="Ellipse 4244" cx="3.5" cy="3.5" r="3.5" transform="translate(-19489.971 -20882.951)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

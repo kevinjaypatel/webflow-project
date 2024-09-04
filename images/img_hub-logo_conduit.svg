@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="88" viewBox="0 0 88 88">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_4164" data-name="Ellipse 4164" cx="44" cy="44" r="44" fill="#002f46"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <circle id="Ellipse_4235" data-name="Ellipse 4235" cx="46.5" cy="46.5" r="46.5" transform="translate(14.174 -152.826)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="img_hub-logo_conduit" transform="translate(-53)">
+    <circle id="Ellipse_4236" data-name="Ellipse 4236" cx="44" cy="44" r="44" transform="translate(53)" fill="#51c4ef"/>
+    <g id="Gruppe_39514" data-name="Gruppe 39514" transform="translate(53)">
+      <g id="Gruppe_maskieren_34390" data-name="Gruppe maskieren 34390" clip-path="url(#clip-path)">
+        <g id="Gruppe_maskieren_34389" data-name="Gruppe maskieren 34389" transform="translate(-16.174 150.826)" clip-path="url(#clip-path-2)">
+          <g id="Gruppe_39516" data-name="Gruppe 39516" transform="translate(10.347 -173.806)">
+            <path id="Pfad_96646" data-name="Pfad 96646" d="M12.752-130.232c40.654,0,34.885,46,34.885,76.809" transform="translate(-8.752 183.645)" fill="none" stroke="#fff" stroke-width="6"/>
+            <path id="Pfad_96647" data-name="Pfad 96647" d="M47.918-130.232c-40.653,0-34.884,46-34.884,76.809" transform="translate(48.736 183.645)" fill="none" stroke="#fff" stroke-width="6"/>
+            <line id="Linie_1671" data-name="Linie 1671" y1="123.714" transform="translate(50.327 11)" fill="none" stroke="#fff" stroke-width="6"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
