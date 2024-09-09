@@ -46,7 +46,8 @@
     <div class="main-wrapper">
       <div class="header">
         <a href="index.html" class="p2 left _50 link">Back</a>
-        <h1 class="h1 left">Create/Edit Proposal</h1>
+        <!-- <h1 class="h1 left">Create/Edit Proposal</h1> -->
+        <h1 class="h1 left">Create Proposal</h1>
       </div>
       <div class="grid-twelve">
         <div id="w-node-_4812341c-8f9c-edce-0d2d-2c9c9fe526bb-32388491" class="hub-nav">
@@ -89,169 +90,68 @@
                       <div class="display-block"><label for="Proposal-Title-2" class="field-label">Proposal Type*</label>
                         <div>
                           <div class="code-embed w-embed w-script">
-                            <div class="custom-select" name="proposal-type" id="proposal-type" style="width:100%" ;="">
-                              <select>
+                            <div class="custom-select" name="proposal-type" id="proposal-type-select" style="width:100%">
+                              <select id="proposal-type" name="proposal-type">
                                 <option value="0">Select ...</option>
-                                <option value="1">Governance Changes</option>
-                                <option value="2">Capital Investment</option>
-                                <option value="3">New Workgroup</option>
+                                <option value="Governance Changes">Governance Changes</option>
+                                <option value="Capital Investment">Capital Investment</option>
+                                <option value="New Workgroup">New Workgroup</option>
                               </select>
                             </div>
-                            <style>
-/* The container must be positioned relative: */
-.custom-select {
-  position: relative;
-  font-family: Avenir;
-  border: 1px solid #303032;
-  border-color: #303032;
-  border-radius: 2px;
-}
-.custom-select select {
-  display: none; /*hide original SELECT element: */
-}
-.select-selected {
-  background-color: #141617;
-}
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: #141617;
-  border: 1px solid #303032;
-  border-color: #303032;
-  border-radius: 2px;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 207, 255, 0.1);
-}
-  </style>
-                            <script>
-  var x, i, j, l, ll, selElmnt, a, b, c;
-/* Look for any elements with the class "custom-select": */
-x = document.getElementsByClassName("custom-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
-  /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 1; j < ll; j++) {
-    /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-    /* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
-    e.stopPropagation();
-    closeAllSelect(this);
-    this.nextSibling.classList.toggle("select-hide");
-    this.classList.toggle("select-arrow-active");
-  });
-}
-function closeAllSelect(elmnt) {
-  /* A function that will close all select boxes in the document,
-  except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  xl = x.length;
-  yl = y.length;
-  for (i = 0; i < yl; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < xl; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
-}
-/* If the user clicks anywhere outside the select box,
-then close all select boxes: */
-document.addEventListener("click", closeAllSelect);
-  </script>
+                            
                           </div>
                         </div>
                       </div>
                       <div id="w-node-_15435975-6ae9-995c-7d19-abab40e906f0-32388491" class="display-block"><label for="Proposal-Title-3" class="field-label">Voting Type*</label>
                         <div>
                           <div class="code-embed w-embed w-script">
-                            <div class="custom-select" name="voting-type" id="voting-type" style="width:100%" ;="">
-                              <select>
+                            <div class="custom-select" name="voting-type" id="voting-type-select" style="width:100%">
+                              <select name="voting-type" id="voting-type">
                                 <option value="0">Select ...</option>
-                                <option value="1">Multiple Choice</option>
-                                <option value="2">Checkbox</option>
-                                <option value="3">Weight Scale</option>
-                                <option value="3">Accept/Reject</option>
+                                <option value="Multiple Choice">Multiple Choice</option>
+                                <option value="Checkbox">Checkbox</option>
+                                <option value="Weight Scale">Weight Scale</option>
+                                <option value="Accept/Reject">Accept/Reject</option>
                               </select>
                             </div>
-                            <style>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="display-block"><label for="voting-options" class="field-label">Voting Options (seperate with comma)*
+</label><input class="text-field w-input" maxlength="256" name="Quorum-Threshold" data-name="Quorum Threshold" placeholder="" type="text" id="voting-options" required=""></div>
+                    <div id="w-node-_99c1da87-85b5-d85c-4f61-477fe123333b-32388491" class="grid-two">
+                      <!-- <div class="display-block"><label for="Proposal-Title-2" class="field-label">Start Snapshot Ordinal*</label>
+                        <div id="start-date-and-time" class="w-embed"><input type="number" id="start-snapshot-ordinal" name="start-snapshot-ordinal" min="1" max="50" required></div>
+                      </div> -->
+                      <div class="display-block"><label for="voting-options" class="field-label">Start Snapshot Ordinal*</label><input class="text-field w-input" maxlength="256" name="start-snapshot-ordinal" data-name="Quorum Threshold" placeholder="" type="number" id="start-snapshot-ordinal" required=""></div>
+                      <!-- <div class="display-block"><label for="Quorum-Threshold-2" class="field-label">End Snapshot Ordinal*</label>
+                        <div id="end-date-and-time" class="w-embed"><input type="number" id="end-snapshot-ordinal" name="end-snapshot-ordinal" min="10" max="100" required></div>
+                      </div> -->
+                      <div class="display-block"><label for="Quorum-Threshold-2" class="field-label">End Snapshot Ordinal*</label><input class="text-field w-input" maxlength="256" name="end-snapshot-ordinal" data-name="Quorum Threshold" placeholder="" type="number" id="end-snapshot-ordinal" required=""></div>
+                    </div>
+                    <div id="snapshot-ordinal-error-message" style="color: red; display: none;">Please enter valid numbers greater than 0 in both fields.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="div-block-2"><input type="submit" data-wait="Please wait..." class="submit-button save w-button" value="Create"></div>
+          </form>
+          <!-- <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66d0c944faac3b3f98a056ec" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="dist/bundle.js"></script>
+  <style>
 /* The container must be positioned relative: */
 .custom-select {
   position: relative;
@@ -310,7 +210,7 @@ document.addEventListener("click", closeAllSelect);
   background-color: rgba(0, 207, 255, 0.1);
 }
   </style>
-                            <script>
+  <script>
   var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
@@ -390,36 +290,5 @@ function closeAllSelect(elmnt) {
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
   </script>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="display-block"><label for="voting-options" class="field-label">Voting Options*</label><input class="text-field w-input" maxlength="256" name="Quorum-Threshold" data-name="Quorum Threshold" placeholder="" type="text" id="voting-options" required=""></div>
-                    <div id="w-node-_99c1da87-85b5-d85c-4f61-477fe123333b-32388491" class="grid-two">
-                      <div class="display-block"><label for="Proposal-Title-2" class="field-label">Start Date and Time*</label>
-                        <div id="start-date-and-time" class="w-embed"><input type="date" id="mainnet-genesis"></div>
-                      </div>
-                      <div class="display-block"><label for="Quorum-Threshold-2" class="field-label">Start Date and Time*</label>
-                        <div id="end-date-and-time" class="w-embed"><input type="date" id="mainnet-genesis"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="div-block-2"><input type="submit" data-wait="Please wait..." class="submit-button save w-button" value="Save Hub"></div>
-          </form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66d0c944faac3b3f98a056ec" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
 </body>
 </html>
