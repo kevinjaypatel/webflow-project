@@ -53,12 +53,10 @@ function buildMessageBody(data, account) {
             proposalType: 			setProposalType,
             pollType: 				defaultVotingType, // default  
             pollOptions: 			data['Quorum-Threshold'].split(','),
-            startSnapshotOrdinal: 	parseInt(data['start-snapshot-ordinal']), //start_snapshot, you should replace
-            endSnapshotOrdinal: 	parseInt(data['end-snapshot-ordinal']) //end_snapshot, you should replace
+            startSnapshotOrdinal: 	parseInt(data['start-snapshot-ordinal']),  //start_snapshot
+            endSnapshotOrdinal: 	parseInt(data['end-snapshot-ordinal'])     //end_snapshot
         }
     }
-
-    // console.log('startSnapshotOrdinal type:', typeof createPoll.CreatePoll.startSnapshotOrdinal); => number
 
     return poll; 
 }
@@ -99,15 +97,14 @@ async function validateFormInputs(data) {
   } else {
   	isValid = false; 
   	errorMessage.textContent = "Error: Incomplete Validation on Form Inputs. Please ensure the Metagraph server is configured correctly."; 
-    // alert("Error: Incomplete Validation on Form Inputs. Please ensure the Metagraph server is configured correctly.");
   }
 
   if (!isValid) {
-    errorMessage.style.display = 'block';  // Show error message
-    return false;  // Return false if validation fails
+    errorMessage.style.display = 'block';   // Show error message
+    return false;                           // Return false if validation fails
   } else {
-    errorMessage.style.display = 'none';  // Hide error message
-    return true;  // Return true if validation passes
+    errorMessage.style.display = 'none';    // Hide error message
+    return true;                            // Return true if validation passes
   }
 }
 
@@ -144,8 +141,7 @@ form.addEventListener('submit', async function(event) {
 	}
 
 	console.log("Form was validated successfully"); 
-    alert("Thank you! Your submission has been received!");
-
+    
     // generate wallet 
     const privateKey = dag4.keyStore.generatePrivateKey();
     const account = dag4.createAccount();
@@ -164,8 +160,9 @@ form.addEventListener('submit', async function(event) {
         // Call the sendTransaction function with parsed values
         const response = await sendTransaction(message, proof);
         console.log('Transaction successful:', response);
+        alert("Thank you! Your submission has been received!");
     } catch (error) {
-        event.preventDefault(); // Prevent form from submitting traditionally
+        // event.preventDefault(); // Prevent form from submitting traditionally
         console.error('Transaction failed:', error);
         alert('Error sending transaction');
     }
